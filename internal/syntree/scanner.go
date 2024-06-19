@@ -7,8 +7,8 @@ import (
 	"io/fs"
 	"strings"
 
+	"github.com/cloud104/pflagstruct/internal/dir"
 	"github.com/pkg/errors"
-	"github.com/totvs-cloud/pflagstruct/internal/dir"
 )
 
 // Scanner is a struct that contains a fileset and is used to scan directories for Go files.

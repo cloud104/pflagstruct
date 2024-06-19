@@ -4,11 +4,11 @@ import (
 	"go/token"
 	"testing"
 
+	"github.com/cloud104/pflagstruct/internal/scan/pkg"
+	"github.com/cloud104/pflagstruct/internal/scan/proj"
+	"github.com/cloud104/pflagstruct/internal/syntree"
+	"github.com/cloud104/pflagstruct/projscan"
 	"github.com/stretchr/testify/require"
-	"github.com/totvs-cloud/pflagstruct/internal/scan/pkg"
-	"github.com/totvs-cloud/pflagstruct/internal/scan/proj"
-	"github.com/totvs-cloud/pflagstruct/internal/syntree"
-	"github.com/totvs-cloud/pflagstruct/projscan"
 )
 
 func TestFinder_FindPackage(t *testing.T) {
@@ -26,7 +26,7 @@ func TestFinder_FindPackage(t *testing.T) {
 		singlepkg, err := svc.FindPackageByDirectory(path)
 		require.NoError(t, err)
 		require.NotEqual(t, path, singlepkg.Directory)
-		require.Equal(t, "github.com/totvs-cloud/pflagstruct/_test/testdata/foo", singlepkg.Path)
+		require.Equal(t, "github.com/cloud104/pflagstruct/_test/testdata/foo", singlepkg.Path)
 	})
 }
 

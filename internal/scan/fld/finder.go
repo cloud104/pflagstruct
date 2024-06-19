@@ -7,8 +7,8 @@ import (
 
 	"github.com/pkg/errors"
 
-	"github.com/totvs-cloud/pflagstruct/internal/syntree"
-	"github.com/totvs-cloud/pflagstruct/projscan"
+	"github.com/cloud104/pflagstruct/internal/syntree"
+	"github.com/cloud104/pflagstruct/projscan"
 )
 
 // Finder provides a way to find fields in Go struct definitions.

@@ -5,10 +5,10 @@ import (
 	"path"
 	"strings"
 
+	"github.com/cloud104/pflagstruct/internal/dir"
+	"github.com/cloud104/pflagstruct/internal/syntree"
+	"github.com/cloud104/pflagstruct/projscan"
 	"github.com/pkg/errors"
-	"github.com/totvs-cloud/pflagstruct/internal/dir"
-	"github.com/totvs-cloud/pflagstruct/internal/syntree"
-	"github.com/totvs-cloud/pflagstruct/projscan"
 )
 
 // Finder is a struct that provides methods for finding Go packages within a project.

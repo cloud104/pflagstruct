@@ -1,4 +1,4 @@
-module github.com/totvs-cloud/pflagstruct
+module github.com/cloud104/pflagstruct
 
 go 1.20
 

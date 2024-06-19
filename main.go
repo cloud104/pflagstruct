@@ -14,12 +14,12 @@ import (
 	"github.com/spf13/cobra"
 	"golang.org/x/exp/slog"
 
-	"github.com/totvs-cloud/pflagstruct/internal/code"
-	scanfld "github.com/totvs-cloud/pflagstruct/internal/scan/fld"
-	scanpkg "github.com/totvs-cloud/pflagstruct/internal/scan/pkg"
-	scanproj "github.com/totvs-cloud/pflagstruct/internal/scan/proj"
-	scanst "github.com/totvs-cloud/pflagstruct/internal/scan/st"
-	"github.com/totvs-cloud/pflagstruct/internal/syntree"
+	"github.com/cloud104/pflagstruct/internal/code"
+	scanfld "github.com/cloud104/pflagstruct/internal/scan/fld"
+	scanpkg "github.com/cloud104/pflagstruct/internal/scan/pkg"
+	scanproj "github.com/cloud104/pflagstruct/internal/scan/proj"
+	scanst "github.com/cloud104/pflagstruct/internal/scan/st"
+	"github.com/cloud104/pflagstruct/internal/syntree"
 )
 
 var (

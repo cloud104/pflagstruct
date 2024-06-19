@@ -1,8 +1,8 @@
 package code
 
 import (
+	"github.com/cloud104/pflagstruct/projscan"
 	changecase "github.com/ku/go-change-case"
-	"github.com/totvs-cloud/pflagstruct/projscan"
 	orderedmap "github.com/wk8/go-ordered-map/v2"
 )
 

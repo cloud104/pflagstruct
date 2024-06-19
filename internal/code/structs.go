@@ -1,8 +1,8 @@
 package code
 
 import (
+	"github.com/cloud104/pflagstruct/projscan"
 	"github.com/dave/jennifer/jen"
-	"github.com/totvs-cloud/pflagstruct/projscan"
 )
 
 type FlagsBuilderStruct struct {

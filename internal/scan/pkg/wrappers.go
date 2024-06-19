@@ -5,8 +5,8 @@ import (
 	"path"
 	"strings"
 
+	"github.com/cloud104/pflagstruct/projscan"
 	"github.com/pkg/errors"
-	"github.com/totvs-cloud/pflagstruct/projscan"
 )
 
 // pkgListWrapper is a wrapper struct for a list of packages.

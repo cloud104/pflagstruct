@@ -4,10 +4,10 @@ import (
 	"go/token"
 	"testing"
 
+	"github.com/cloud104/pflagstruct/internal/scan/proj"
+	"github.com/cloud104/pflagstruct/internal/syntree"
+	"github.com/cloud104/pflagstruct/projscan"
 	"github.com/stretchr/testify/require"
-	"github.com/totvs-cloud/pflagstruct/internal/scan/proj"
-	"github.com/totvs-cloud/pflagstruct/internal/syntree"
-	"github.com/totvs-cloud/pflagstruct/projscan"
 )
 
 func TestFinder_FindProject(t *testing.T) {
@@ -23,7 +23,7 @@ func TestFinder_FindProject(t *testing.T) {
 		project, err := svc.FindProjectByDirectory(path)
 		require.NoError(t, err)
 		require.NotEqual(t, path, project.Directory)
-		require.Equal(t, "github.com/totvs-cloud/pflagstruct/_test/testdata", project.ModuleName)
+		require.Equal(t, "github.com/cloud104/pflagstruct/_test/testdata", project.ModuleName)
 	})
 }
 

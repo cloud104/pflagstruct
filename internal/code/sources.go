@@ -4,10 +4,10 @@ import (
 	"fmt"
 	"os"
 
+	"github.com/cloud104/pflagstruct/projscan"
 	"github.com/dave/jennifer/jen"
 	"github.com/pkg/errors"
 	"github.com/samber/lo"
-	"github.com/totvs-cloud/pflagstruct/projscan"
 )
 
 type FlagSource struct {

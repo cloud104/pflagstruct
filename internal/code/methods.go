@@ -8,7 +8,7 @@ import (
 	"github.com/dave/jennifer/jen"
 	changecase "github.com/ku/go-change-case"
 
-	"github.com/totvs-cloud/pflagstruct/projscan"
+	"github.com/cloud104/pflagstruct/projscan"
 )
 
 type SetterMethod struct {

@@ -1,4 +1,4 @@
-module github.com/totvs-cloud/pflagstruct/_test/testdata
+module github.com/cloud104/pflagstruct/_test/testdata
 
 go 1.20
 

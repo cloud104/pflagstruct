@@ -4,11 +4,11 @@ import (
 	"go/token"
 	"testing"
 
+	"github.com/cloud104/pflagstruct/internal/scan/pkg"
+	"github.com/cloud104/pflagstruct/internal/scan/proj"
+	"github.com/cloud104/pflagstruct/internal/scan/st"
+	"github.com/cloud104/pflagstruct/internal/syntree"
 	"github.com/stretchr/testify/require"
-	"github.com/totvs-cloud/pflagstruct/internal/scan/pkg"
-	"github.com/totvs-cloud/pflagstruct/internal/scan/proj"
-	"github.com/totvs-cloud/pflagstruct/internal/scan/st"
-	"github.com/totvs-cloud/pflagstruct/internal/syntree"
 )
 
 func TestFinder_FindFieldsByStruct(t *testing.T) {

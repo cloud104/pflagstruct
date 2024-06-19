@@ -4,9 +4,9 @@ import (
 	"os"
 	"path"
 
+	"github.com/cloud104/pflagstruct/internal/dir"
+	"github.com/cloud104/pflagstruct/projscan"
 	"github.com/pkg/errors"
-	"github.com/totvs-cloud/pflagstruct/internal/dir"
-	"github.com/totvs-cloud/pflagstruct/projscan"
 	"golang.org/x/mod/modfile"
 )
 

@@ -2,7 +2,7 @@
 
 package code
 
-import "github.com/totvs-cloud/pflagstruct/projscan"
+import "github.com/cloud104/pflagstruct/projscan"
 
 // FieldKind
 // ENUM(Native,StdLib,StringMap,TCloudTag,Struct)

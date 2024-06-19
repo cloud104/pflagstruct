@@ -10,7 +10,7 @@ To install you need to have Go installed and set up on your machine. Then, you c
 the tool:
 
 ```shell
-go install github.com/totvs-cloud/pflagstruct@latest
+go install github.com/cloud104/pflagstruct@latest
 ```
 
 ## Usage

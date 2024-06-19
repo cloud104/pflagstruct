@@ -6,8 +6,8 @@ import (
 
 	changecase "github.com/ku/go-change-case"
 
-	"github.com/totvs-cloud/pflagstruct/internal/dir"
-	"github.com/totvs-cloud/pflagstruct/projscan"
+	"github.com/cloud104/pflagstruct/internal/dir"
+	"github.com/cloud104/pflagstruct/projscan"
 )
 
 type Generator struct {

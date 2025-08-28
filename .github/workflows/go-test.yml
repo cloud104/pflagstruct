@@ -14,7 +14,7 @@ permissions:
 
 jobs:
   test:
-    runs-on: tks-gha-runner
+    runs-on: ubuntu-latest
 
     steps:
       - name: Checkout

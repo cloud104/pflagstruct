@@ -3,11 +3,12 @@ package st
 import (
 	"go/ast"
 
+	"log/slog"
+
 	"github.com/cloud104/pflagstruct/internal/dir"
 	"github.com/cloud104/pflagstruct/internal/syntree"
 	"github.com/cloud104/pflagstruct/projscan"
 	"github.com/pkg/errors"
-	"golang.org/x/exp/slog"
 )
 
 // Finder is a struct that represents a Go struct type finder.

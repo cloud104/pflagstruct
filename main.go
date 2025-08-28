@@ -3,6 +3,7 @@ package main
 import (
 	"fmt"
 	"go/token"
+	"log/slog"
 	"os"
 	"time"
 
@@ -12,7 +13,6 @@ import (
 	"github.com/lmittmann/tint"
 	"github.com/pkg/errors"
 	"github.com/spf13/cobra"
-	"golang.org/x/exp/slog"
 
 	"github.com/cloud104/pflagstruct/internal/code"
 	scanfld "github.com/cloud104/pflagstruct/internal/scan/fld"

@@ -25,6 +25,13 @@ jobs:
         with:
           go-version-file: 'go.mod'
           cache: true
+          cache-dependency-path: |
+            go.sum
+            _test/testdata/go.sum
+
+      - name: Download dependencies
+        run: |
+          find . -name go.mod -not -path '*/vendor/*' -execdir go mod download \;
 
       - name: Verify modules
         run: |

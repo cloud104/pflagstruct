@@ -78,7 +78,7 @@ func (f *Finder) buildField(expr ast.Expr, st *projscan.Struct, proj *projscan.P
 			Type:         field.Type,
 			Doc:          field.Doc,
 			StructRef:    field.StructRef,
-			Pointer:      false,
+			Pointer:      field.Pointer,
 			Array:        true,
 			ArrayPointer: field.Pointer,
 		})

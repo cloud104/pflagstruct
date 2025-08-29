@@ -1,0 +1,54 @@
+name: Go Test
+
+on:
+  pull_request:
+    branches: [ "main" ]
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+permissions:
+  contents: read
+  pull-requests: read
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v5
+
+      - name: Set up Go
+        uses: actions/setup-go@v5
+        with:
+          go-version-file: 'go.mod'
+          cache: true
+          cache-dependency-path: |
+            go.sum
+            _test/testdata/go.sum
+
+      - name: Download dependencies
+        run: |
+          find . -name go.mod -not -path '*/vendor/*' -execdir go mod download \;
+
+      - name: Verify modules
+        run: |
+          go mod tidy
+          git diff --exit-code -- go.mod go.sum || (echo "Run 'go mod tidy' locally" && exit 1)
+
+      - name: Format
+        run: |
+          go fmt ./...
+          git diff --exit-code || (echo "Run 'go fmt ./...' locally" && exit 1)
+
+      - name: Vet
+        run: go vet ./...
+
+      - name: Test
+        run: go test -race ./...
+
+      - name: Build
+        run: |
+          go build -trimpath -ldflags '-s -w' .

@@ -7,10 +7,11 @@ import (
 )
 
 type Quux struct {
-	Id     string `json:"Id"`
-	Name   string `json:"Name"`
-	Quuz   Quuz   `json:"Quuz"`
-	Status string `json:"Status"`
+	Id      string `json:"Id"`
+	Name    string `json:"Name"`
+	Quuz    Quuz   `json:"Quuz"`
+	Status  string `json:"Status"`
+	Numbers *[]int `json:"Numbers"`
 }
 
 type Quuz struct {

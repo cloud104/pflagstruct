@@ -1,6 +1,6 @@
 module github.com/cloud104/pflagstruct/_test/testdata
 
-go 1.20
+go 1.25.0
 
 require github.com/apirator/apirator v1.0.1
 

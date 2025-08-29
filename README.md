@@ -132,6 +132,16 @@ The CLI provides the following flags:
 Feel free to explore the available flags and experiment with different options to generate code based on your struct
 definitions.
 
+## How the Project Is Built
+
+The project is structured into modular internal packages, each with a specific responsibility:
+
+* `internal/scan/` → scans Go code for struct definitions, fields, packages, and projects.
+* `internal/code/` → generates Go code ([`jen` library](https://github.com/dave/jennifer) is used to programmatically build Go ASTs).
+* `internal/dir/` → handles filesystem paths.
+* `projscan/` → defines core types (`Struct`, `Field`, `Package`, etc.) used in scanning and generation.
+* `main.go` → CLI entrypoint, built with `cobra`.
+
 ## Contributing
 
 Contributions to the pflagstruct are welcome! If you find any issues or have suggestions for improvement,

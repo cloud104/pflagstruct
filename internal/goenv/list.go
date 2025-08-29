@@ -1,0 +1,25 @@
+package goenv
+
+import (
+	"bytes"
+	"os/exec"
+	"strings"
+
+	"github.com/pkg/errors"
+)
+
+// ListDir runs "go list -f '{{.Dir}}' <pkg>" and returns the source path.
+func ListDir(pkg string) (string, error) {
+	cmd := exec.Command("go", "list", "-f", "{{.Dir}}", pkg)
+
+	var out bytes.Buffer
+	cmd.Stdout = &out
+	cmd.Stderr = &out
+
+	err := cmd.Run()
+	if err != nil {
+		return "", errors.Errorf("failed to run go list: %v, output: %s", err, out.String())
+	}
+
+	return strings.TrimSpace(out.String()), nil
+}

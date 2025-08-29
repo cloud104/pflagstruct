@@ -1,12 +1,11 @@
 package pkg
 
 import (
-	"os"
 	"path"
 	"strings"
 
+	"github.com/cloud104/pflagstruct/internal/goenv"
 	"github.com/cloud104/pflagstruct/projscan"
-	"github.com/pkg/errors"
 )
 
 // pkgListWrapper is a wrapper struct for a list of packages.
@@ -68,9 +67,9 @@ func (w *projAndPkgWrapper) getPackageDirectory() (string, error) {
 		return replacePrefix(w.pkgpath, dep.Path, dep.Directory), nil
 	}
 
-	goroot, ok := os.LookupEnv("GOROOT")
-	if !ok {
-		return "", errors.New(`the environment variable GOROOT has not been configured`)
+	goroot, err := goenv.Get("GOROOT")
+	if err != nil {
+		return "", err
 	}
 
 	return path.Join(goroot, "src", w.pkgpath), nil

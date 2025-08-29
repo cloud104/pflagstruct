@@ -1,13 +1,14 @@
 package proj
 
 import (
-	"os"
 	"path"
 
-	"github.com/cloud104/pflagstruct/internal/dir"
-	"github.com/cloud104/pflagstruct/projscan"
 	"github.com/pkg/errors"
 	"golang.org/x/mod/modfile"
+
+	"github.com/cloud104/pflagstruct/internal/dir"
+	"github.com/cloud104/pflagstruct/internal/goenv"
+	"github.com/cloud104/pflagstruct/projscan"
 )
 
 type Module struct {
@@ -55,9 +56,9 @@ func (m *Module) Directory() string {
 
 // Dependencies returns a list of dependencies for the module, or an error if they cannot be determined.
 func (m *Module) Dependencies() ([]*projscan.Dependency, error) {
-	gopath, ok := os.LookupEnv("GOPATH")
-	if !ok {
-		return nil, errors.New(`the environment variable GOPATH has not been configured`)
+	gopath, err := goenv.Get("GOPATH")
+	if err != nil {
+		return nil, err
 	}
 
 	dependencies := make([]*projscan.Dependency, 0)

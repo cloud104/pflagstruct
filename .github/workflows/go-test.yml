@@ -39,9 +39,6 @@ jobs:
       - name: Vet
         run: go vet ./...
 
-      - name: Set GOPATH for Test
-        run: echo "GOPATH=$(go env GOPATH)" >> $GITHUB_ENV
-
       - name: Test
         run: go test -race ./...
 

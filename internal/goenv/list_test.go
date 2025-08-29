@@ -36,14 +36,14 @@ func TestGoListDir(t *testing.T) {
 	}
 	for _, tt := range tests {
 		t.Run(tt.name, func(t *testing.T) {
-			got, err := GoListDir(tt.args.pkg)
+			got, err := ListDir(tt.args.pkg)
 			if (err != nil) != tt.wantErr {
-				t.Errorf("GoListDir() error = %v, wantErr %v", err, tt.wantErr)
+				t.Errorf("ListDir() error = %v, wantErr %v", err, tt.wantErr)
 				return
 			}
 
 			if !tt.wantErr && got != tt.want {
-				t.Errorf("GoListDir() got = %v, want %v", got, tt.want)
+				t.Errorf("ListDir() got = %v, want %v", got, tt.want)
 			}
 		})
 	}

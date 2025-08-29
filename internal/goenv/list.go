@@ -8,8 +8,8 @@ import (
 	"github.com/pkg/errors"
 )
 
-// GoListDir runs "go list -f '{{.Dir}}' <pkg>" and returns the source path.
-func GoListDir(pkg string) (string, error) {
+// ListDir runs "go list -f '{{.Dir}}' <pkg>" and returns the source path.
+func ListDir(pkg string) (string, error) {
 	cmd := exec.Command("go", "list", "-f", "{{.Dir}}", pkg)
 
 	var out bytes.Buffer
